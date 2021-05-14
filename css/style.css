@@ -1,0 +1,106 @@
+body {
+    background-color:rgb(30, 30, 30);
+}
+
+#divPadre
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content:center;
+    align-items:center;
+    flex-direction: row;
+    position: relative;
+}
+
+#divSpinner {
+    position: absolute;
+    z-index: 2;
+    opacity: 80%;
+
+    border: 16px solid whitesmoke;
+    border-radius: 50%;
+    border-top: 16px solid lightseagreen;
+    border-bottom: 16px solid lightseagreen;
+    width: 20vh;
+    height: 20vh;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#divEditar
+{ 
+    position: absolute;
+    z-index: 1;
+    background-color: lightblue; 
+    width: fit-content;
+    height: fit-content;
+    padding: 1em;
+    border: 1px solid black;
+    animation: fade 0.5s linear;
+}
+
+@keyframes fade {
+    0% { opacity: 0%;; }
+    100% { opacity: 100%; }
+}
+
+#divTabla
+{
+    position: static;
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+th {
+    background-color: lightblue;
+    color: black;
+    padding: 0.3em;
+    text-align: center;
+}
+tr, td {
+    border: 1px solid gainsboro;
+    padding-left: 1em;
+    text-align: left;
+}
+tr:nth-child(even) {background-color: whitesmoke;}
+tr:nth-child(odd) {background-color: gainsboro;}
+
+.boton {
+    background-color:whitesmoke;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+.boton:hover, tr:hover{
+    background-color:slategray;
+    color: white;
+}
+
+.conError {
+    border: 2px solid red;
+}
+.sinError {
+    border: 1px solid black;
+}
+
+.titulo {
+    font-weight: bold;
+}
+
+#inputModif {
+    background-color: green;
+}
+
+#inputElim {
+    background-color: red;
+}

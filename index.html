@@ -17,29 +17,34 @@
         <table id="divTabla">
             <thead>
                 <th>Nombre</th>                
-                <th>Apellido</th>                
-                <th>Fecha</th>
-                <th>Sexo</th>
+                <th>Cuatrimestre</th>                
+                <th>Fecha Final</th>
+                <th>Turno</th>
             </thead>
             <tbody id=tcuerpo></tbody>
             <tfoot></tfoot>
         </table>
 
-        <div id="divEditarPersona" class="centrado" hidden>
+        <div id="divEditar" class="centrado" hidden>
             <label for="inputNombre" class="titulo">Nombre</label><br>
             <input type="text" id="inputNombre"><br>
 
-            <label for="inputApellido" class="titulo">Apellido</label><br>
-            <input type="text" id="inputApellido"><br>
-
-            <label class="titulo">Sexo</label><br>
-            <input type="radio" name="sexo" id="inputMasc" value="masculino">
-            <label for="inputMasc">Masculino</label><br>
-
-            <input type="radio" name="sexo" id="inputFem" value="femenino">
-            <label for="inputFem">Femenino</label><br>
-
-            <label for="inputFecha" class="titulo">Fecha</label><br>
+            <label for="cuatri" class="titulo">Cuatrimestre</label><br>
+            <select name="cuatri" id="selCuatri">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            
+            <label class="titulo">Turno</label><br>
+            <input type="radio" name="turno" id="inputManana">
+            <label for="inputManana">Mañana</label><br>
+            
+            <input type="radio" name="turno" id="inputNoche"> 
+            <label for="inputNoche">Noche</label><br>
+            
+            <label for="inputFecha" class="titulo">Fecha Final</label><br>
             <input type="date" name="fecha" id="inputFecha"><br>
 
             <input type="button" value="Modificar" class="boton" id="inputModif">
