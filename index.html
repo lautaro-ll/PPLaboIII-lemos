@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Parcial Laboratorio 3 - Lautaro Lucas Lemos</title>
+    <script src="./js/pparcial.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="divPadre">
+
+        <div id="divSpinner" class="loader" class="centrado" hidden>
+        </div>
+
+        <table id="divTabla">
+            <thead>
+                <th>Nombre</th>                
+                <th>Apellido</th>                
+                <th>Fecha</th>
+                <th>Sexo</th>
+            </thead>
+            <tbody id=tcuerpo></tbody>
+            <tfoot></tfoot>
+        </table>
+
+        <div id="divEditarPersona" class="centrado" hidden>
+            <label for="inputNombre" class="titulo">Nombre</label><br>
+            <input type="text" id="inputNombre"><br>
+
+            <label for="inputApellido" class="titulo">Apellido</label><br>
+            <input type="text" id="inputApellido"><br>
+
+            <label class="titulo">Sexo</label><br>
+            <input type="radio" name="sexo" id="inputMasc" value="masculino">
+            <label for="inputMasc">Masculino</label><br>
+
+            <input type="radio" name="sexo" id="inputFem" value="femenino">
+            <label for="inputFem">Femenino</label><br>
+
+            <label for="inputFecha" class="titulo">Fecha</label><br>
+            <input type="date" name="fecha" id="inputFecha"><br>
+
+            <input type="button" value="Modificar" class="boton" id="inputModif">
+            <input type="button" value="Eliminar" class="boton" id="inputElim">
+            <input type="button" value="X" class="boton" id="inputCerrar">
+        </div>
+    </div>
+</body>
+</html>
