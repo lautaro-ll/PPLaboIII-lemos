@@ -7,23 +7,31 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    flex-direction: row;
-    position: relative;
+    position:relative;
 }
-
-#divSpinner {
+#divDimmer {
     position: absolute;
     z-index: 2;
+    background-color: black;
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+
+}
+#divSpinner {
+    position: absolute;
+    z-index: 3;
     opacity: 80%;
 
     border: 16px solid whitesmoke;
     border-radius: 50%;
     border-top: 16px solid lightseagreen;
     border-bottom: 16px solid lightseagreen;
-    width: 20vh;
-    height: 20vh;
+    width: 100px;
+    height: 100px;
     animation: spin 2s linear infinite;
 }
 
@@ -65,11 +73,12 @@ th {
     background-color: lightblue;
     color: black;
     padding: 0.3em;
-    text-align: center;
+    padding-left: 3em;
+    text-align: left;
 }
 tr, td {
     border: 1px solid gainsboro;
-    padding-left: 1em;
+    padding-left: 3em;
     text-align: left;
 }
 tr:nth-child(even) {background-color: whitesmoke;}

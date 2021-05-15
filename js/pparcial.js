@@ -104,6 +104,7 @@ function editarFila(event)
             //revertir a este formato 24/11/2019
             var res = nuevaFechaFinal.split("-");
             nuevaFechaFinal = (res[2]+"/"+res[1]+"/"+res[0]);
+            jsonMateria["fechaFinal"] = nuevaFechaFinal;
 
             //ENVIO DE DATOS POR METODO POST
             var peticionHttp = new XMLHttpRequest();
@@ -112,6 +113,7 @@ function editarFila(event)
             peticionHttp.send(JSON.stringify(jsonMateria));
             
             $("divSpinner").hidden = false;
+            $("divDimmer").hidden = false;
             
             peticionHttp.onreadystatechange = function() {
                 if(peticionHttp.readyState==4 && peticionHttp.status==200) 
@@ -128,6 +130,8 @@ function editarFila(event)
                         alert("Error de servidor, no se pudieron modificar los datos.");
                     }
                     $("divSpinner").hidden = true;
+                    $("divDimmer").hidden = true;
+
                     divEdit.hidden = true;
                 }
             }
@@ -143,6 +147,7 @@ function editarFila(event)
         peticionHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         peticionHttp.send(JSON.stringify(jsonMateria));
         $("divSpinner").hidden = false;
+        $("divDimmer").hidden = false;
 
         peticionHttp.onreadystatechange= function() 
         {                
@@ -153,6 +158,8 @@ function editarFila(event)
                     fila.parentNode.removeChild(fila);
                 }
                 $("divSpinner").hidden = true;
+                $("divDimmer").hidden = true;
+
                 divEdit.hidden = true;
             }
         }
